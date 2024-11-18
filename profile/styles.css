@@ -1,0 +1,33 @@
+/* Write your styles here */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 22px;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.my_profile {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border: 1px solid black;
+  margin: 12px 0px;
+  padding: 7px 2px;
+}
+.btn {
+  width: fit-content;
+  padding: 7px 12px;
+  background-color: black !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.logout {
+  margin-top: 12px;
+}

@@ -1,0 +1,119 @@
+* {
+  padding: 0px;
+  border: 0px;
+}
+body {
+  padding: 0px 22px;
+}
+.containers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  gap: 20px;
+}
+.cart_box {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 10px;
+  width: 70%;
+  height: 90vh;
+  overflow: auto;
+  border: 1px solid #000;
+  min-height: 70vh;
+  padding: 12px;
+}
+
+.item {
+  border: 1px solid black;
+  width: 260px;
+  height: 340px;
+  /* width: 30%; */
+}
+
+.item .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item .info {
+  padding: 1rem;
+}
+
+.item button {
+  width: 100%;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.item .colors {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.item .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+.img {
+  height: 170px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.billing {
+  width: 350px;
+  max-width: 350px;
+  border: 1px solid #000;
+  max-height: 80vh;
+  background-color: #000;
+  color: white;
+}
+.billing_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 300px;
+  overflow-y: auto;
+  flex-direction: column;
+  padding: 2px 12px;
+  font-size: 17px;
+}
+.hr {
+  color: white !important;
+  height: 0.2px;
+  border: 1px solid #eee;
+}
+.btn_container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.items_Card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 12px;
+}
+#total {
+  font-size: 20px;
+  font-weight: 500;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Login</h2>
+    <form for="name">
+
+        <label>Email</label>
+        <input type="email" name="email" id="email" />
+        <label>Password</label>
+        <input type="password" name="password" id="password" />
+
+        <button type="submit" name="submit" class="btn" id="login" value="Submit">Submit</button>
+        <div>
+            <span>If does not have an account</span> <a href="/index.html" style="color: rgb(45, 45, 189);">Create
+                Account</a>
+        </div>
+    </form>
+    <small id="error"></small>
+
+
+
+    <script>
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let error = document.getElementById("error");
+
+        const generateToken = () => {
+            return Math.random(0, 10000).toString();
+        }
+
+        document.getElementById("login").addEventListener("click", (e) => {
+            e.preventDefault();
+
+            if (email.value === "" || password.value === "") {
+                error.style.color = "red"
+                error.innerText = " Fields should not be empty"
+            } else {
+                error.innerText = ""
+                let users = JSON.parse(localStorage.getItem("user") || "[]");
+
+
+                if (users.length > 0) {
+                    let filterArr = users.filter((u) => u.email === email.value);
+
+                    if (filterArr.length > 0) {
+                        let obj = filterArr[0];
+
+                        if (obj.email === email.value && password.value === obj.password) {
+                            localStorage.setItem("currentUser", JSON.stringify({
+                                ...obj,
+                                token: generateToken()
+                            }))
+                            error.style.color = "green";
+                            error.innerText = "Login Successfully!"
+                            email.value = "";
+                            password.value = ""
+                            window.location.href = "/profile/index.html"
+                            // login
+                        } else {
+                            // not existing
+                        }
+                    }
+                } else {
+                    error.innerText = "Please Signup!"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
