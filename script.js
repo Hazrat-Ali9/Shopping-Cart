@@ -51,3 +51,5 @@ submit.addEventListener("click", (e) => {
     error.innerText = "confirm password is mismatch";
   }
 });
+
+// Script js
