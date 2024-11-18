@@ -1,8 +1,3 @@
-// Link for the documentation:
-// https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration
-
-// Add button code documentation:
-// https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button
 
 document.getElementById("btn").onclick = function (e) {
   var options = {
@@ -23,3 +18,5 @@ document.getElementById("btn").onclick = function (e) {
   // clear mycart - localStorage
   e.preventDefault();
 };
+
+// Prevent Default
