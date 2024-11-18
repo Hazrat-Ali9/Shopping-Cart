@@ -68,3 +68,6 @@ if (currentUser) {
 } else {
   window.location.href = "/login.html";
 }
+
+
+// Script js logout at the user
