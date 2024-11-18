@@ -46,7 +46,7 @@ function renderElement(data) {
         `;
   });
 }
-
+// Billing Function
 function billingRender(data) {
   billing_items.innerHTML = data.map((val) => {
     return `
