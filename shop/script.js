@@ -143,3 +143,5 @@ function handleToggle(type) {
   }
 }
 handleToggle();
+
+// Handel Toggle
